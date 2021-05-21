@@ -23,6 +23,7 @@ public class addinggameRAND {
 
 	
 	public static int play(Scanner inputDevice, Random rand) {
+		try {
 		int operands = rand.nextInt(4) + 2;
 		int sum = rand.nextInt(10)+1;
 		System.out.print(sum);
@@ -41,7 +42,13 @@ public class addinggameRAND {
 			return 0;
 		}
 	}
-
+		catch (Exception e_) {
+			System.out.println("Oops.. something went wrong");
+			System.exit(0);
+			return 0;
+		}
+	}
+	
 	
 	public static void password(Scanner inputDevice) {
 		String phrase;
@@ -51,5 +58,6 @@ public class addinggameRAND {
 		} while (!phrase.equals("math_game"));
 		System.out.println("Welcome to the math game");
 		System.out.println("Every question you answer correctly gives you a point. If you answer three questions incorrectly, the game ends and your points are recorded");
+		
 	}
 }
